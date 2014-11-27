@@ -28,7 +28,7 @@ app.get('/api/mylocation', function(req, res){
     var allow = [];
     var data = [];
 
-    if(allow.indexOf(ip) > -1 & allow.length > 0) {
+    if(allow.indexOf(ip) > -1 || allow.length == 0) {
         var geo = geoip.lookup(ip);
         if (geo)
             data = [ip, geo.country, geo.region, geo.city];//.join(",");
