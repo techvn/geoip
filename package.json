@@ -1,0 +1,9 @@
+{
+  "name": "geoipApp",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "~3.4.4",
+    "geoip-lite": "^1.1.3",
+    "geoip-native": "0.0.8"    
+  }
+}
