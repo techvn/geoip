@@ -25,10 +25,10 @@ var geoip = require('geoip-lite');
 app.get('/api/mylocation', function(req, res){
     var ip = req.connection.remoteAddress;
 
-    var allow = ['117.0.33.158'];
+    var allow = [];
     var data = [];
 
-    if(allow.indexOf(ip) > -1) {
+    if(allow.indexOf(ip) > -1 & allow.length > 0) {
         var geo = geoip.lookup(ip);
         if (geo)
             data = [ip, geo.country, geo.region, geo.city];//.join(",");
